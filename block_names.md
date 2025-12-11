@@ -1,20 +1,90 @@
-# Block Names
+# Block Names and Their Questions
 
-This file lists all the available block names defined in `backend/template-rules.json`. These names can be used in the `{{ "block": "your_block_name" }}` placeholder in a form template.
+This file lists all the available block names defined in `backend/template-rules.json` and their associated question IDs. These names can be used in the `{{ "block": "your_block_name" }}` placeholder in a form template.
 
 *   `first_section`
+    *   *No questions in this block.*
 *   `flourishing`
+    *   `fl_competent`
+    *   `fl_good`
+    *   `fl_optimistic`
+    *   `fl_respect`
+    *   `fl_meaningful`
+    *   `fl_rewarding`
+    *   `fl_engaged`
+    *   `fl_contribute`
 *   `happiness`
+    *   `hs_consider`
+    *   `hs_general`
+    *   `hs_not_general`
 *   `alcohol_use`
+    *   `au_often`
+    *   `au_many`
+    *   `au_often_45`
 *   `hazing`
+    *   `hp_skills_recognize`
+    *   `hp_skills_intervene`
+    *   `hp_skills_program`
+    *   `hp_knowledge_consequences`
+    *   `hp_knowledge_legal`
+    *   `hp_knowledge_program`
+    *   `hp_perspective_positive`
+    *   `hp_perspective_engage`
+    *   `hp_perspective_intervene`
 *   `depression`
+    *   `de_interest`
+    *   `de_down`
+    *   `de_sleep`
+    *   `de_tired`
+    *   `de_appetite`
+    *   `de_bad`
+    *   `de_concentration`
+    *   `de_fidget`
+    *   `de_hurt`
 *   `anxiety`
+    *   `ax_nervous`
+    *   `ax_worry`
+    *   `ax_things`
+    *   `ax_restless`
+    *   `ax_irritable`
+    *   `ax_afraid`
 *   `loneliness`
+    *   `lo_companionship`
+    *   `lo_left`
+    *   `lo_isolated`
 *   `engagement`
+    *   `en_community`
+    *   `en_social`
+    *   `en_academic`
+    *   `en_excel`
+    *   `en_confident`
 *   `academic`
+    *   `ac_emotion_enjoy`
+    *   `ac_emotion_good`
+    *   `ac_emotion_contented`
+    *   `ac_engagement_absorbed`
+    *   `ac_engagement_excited`
+    *   `ac_engagement_time`
+    *   `ac_relationships_support`
+    *   `ac_relationships_cared`
+    *   `ac_relationships_satisfied`
+    *   `ac_meaning_meaningful`
+    *   `ac_meaning_valuable`
+    *   `ac_meaning_direction`
+    *   `ac_accomplish_progress`
+    *   `ac_accomplish_goals`
+    *   `ac_accomplish_handle`
 *   `demographics`
+    *   `de_leader`
+    *   `de_living`
 *   `membership`
+    *   `membership`
 *   `relationships`
+    *   `closest`
+    *   `influential`
 *   `interactions`
+    *   `interact`
 *   `name`
+    *   `name`
 *   `missing_name`
+    *   `my_name`
