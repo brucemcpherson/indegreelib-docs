@@ -72,3 +72,24 @@ However, I'm going to demonstrate the use of another tag. I may at some point wa
 
 
 Now we have a template form we can use for both pre and post phases, and optionally a demographics phase if we decide to create one in the future. 
+
+
+1. A screenshot of the UI when a `pre` phase form with the additional tag `demographics`.
+
+![Ready to generate a pre phase form](tags-ui.png)
+
+2. A screenshot of the form information once the form has been generated.
+
+![Post generation form information](post-generation-info.png)
+
+3. A screenshot of the UI when preparing the `post` phase form. 
+
+![Preparing the post phase form](post-phase-ui.png)
+
+4. A screenshot of the post phase form information once it has been generated.
+
+![Post phase form information](post-phase-info.png)
+
+5. Combining pre and post phase data to create a graph.
+
+![Graph information showing multiple phases](graph-info.png)
