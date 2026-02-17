@@ -76,20 +76,20 @@ Now we have a template form we can use for both pre and post phases, and optiona
 
 1. A screenshot of the UI when a `pre` phase form with the additional tag `demographics`.
 
-![Ready to generate a pre phase form](tags-ui.png)
+![Ready to generate a pre phase form](./screenshots/tags-ui.png)
 
 2. A screenshot of the form information once the form has been generated.
 
-![Post generation form information](post-generation-info.png)
+![Post generation form information](./screenshots/post-generation-info.png)
 
 3. A screenshot of the UI when preparing the `post` phase form. 
 
-![Preparing the post phase form](post-phase-ui.png)
+![Preparing the post phase form](./screenshots/post-phase-ui.png)
 
 4. A screenshot of the post phase form information once it has been generated.
 
-![Post phase form information](post-phase-info.png)
+![Post phase form information](./screenshots/post-phase-info.png)
 
 5. Combining pre and post phase data to create a graph.
 
-![Graph information showing multiple phases](graph-info.png)
+![Graph information showing multiple phases](./screenshots/graph-info.png)
