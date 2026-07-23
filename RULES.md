@@ -165,3 +165,30 @@ This object specifies which variables and edges should be included in the final 
 
 *   `vertices` (array of strings): A list of variable names (from scoring, aggregation, or raw question `id`s) that should be included as attributes for each vertex (participant) in the GML file.
 *   `edges` (array of strings): A list of edge definition names (from the `edges` object) that should be included in the GML file.
+
+---
+
+## `treatmentAnalysis` Configuration Setting
+
+Note: `treatmentAnalysis` is a project runtime configuration property (set via the UI or `config.treatmentAnalysis`) rather than a section in `template-rules.json`. When `treatmentAnalysis: true`, `Network.js` automatically enriches vertices and computes graph-level network capacity during response processing. For complete calculation formulas and definitions, see [vertex_attributes.md](file:///Users/brucemcpherson/Documents/repos/indegreelib/docs/vertex_attributes.md).
+
+### Vertex Attributes
+
+*   `treatment_group`, `treatment_selected`, `treatment_completed`: Decoded treatment classification fields based on `treatment_status` numeric codes.
+*   `betweenness`: Normalized betweenness centrality score `[0, 1]`.
+*   `closeness`: Normalized closeness centrality score `[0, 1]`.
+*   `eigenvector`: Eigenvector centrality score (computed via PageRank algorithm with 0.85 damping factor).
+*   `bottleneck_rank`: Integer rank (`1` = highest) based on betweenness centrality score.
+*   `base_seed_score`: Composite seed score combining 34% Closeness, 33% Betweenness, and 33% Normalized Eigenvector centrality.
+*   `seed_rank`: Diversified seed rank integer (`1` = top seed) computed using a greedy selection algorithm with distance-based redundancy penalties.
+*   `treated_distance`: Shortest path distance to the nearest target participant who completed treatment (`-1` if unreachable, `0` if self).
+*   `treated_id`: Vertex ID of the nearest completed treatment participant.
+
+### Pre-Stage Network Capacity Assessment
+
+When executing pre-stage analysis, `doTreatmentAnalysis` evaluates initial network viability:
+*   `influencerReachByStep`: Dynamic coverage map at path distances 1, 2, and 3 from baseline influencers.
+*   `unreachablePercent`: Percentage of vertices unable to reach any influencer node.
+*   `isViable`: Boolean indicator verifying whether average path length and fragmentation rate satisfy viability thresholds (`VIABLE_AVG_PATH_LENGTH = 3.5`, `VIABLE_FRAGMENTATION_RATE = 0.25`).
+*   `network_log`: Dumps pre-assessment capacity metrics into the `network_log` Google Sheet tab.
+
