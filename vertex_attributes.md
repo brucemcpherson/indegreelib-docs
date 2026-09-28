@@ -29,7 +29,7 @@ These attributes decode the raw numeric `treatment_status` code assigned to each
 
 ## 2. Centrality Metrics
 
-Centrality metrics quantify the structural importance, reachability, and influence of individual participants within the social graph.
+Centrality metrics quantify the structural importance, reachability, and influence of individual participants within the social graph. Note that centralities are calculated using only the 'closest_edge'.
 
 ### `betweenness`
 * **Definition**: Measures how frequently a node acts as a bridge along the shortest path between all other pairs of nodes in the graph.
@@ -45,12 +45,16 @@ Centrality metrics quantify the structural importance, reachability, and influen
   Where $d(v, u)$ is the shortest path distance between node $v$ and node $u$.
 * **Interpretation**: Values range from `0.0` to `1.0`. High closeness indicates that information or behavioral contagion can spread rapidly from this individual to the rest of the network.
 
-### `eigenvector`
+### `pagerank`
 * **Definition**: Measures a node's influence by taking into account the influence of its neighbors. Connectedness to highly-connected nodes yields a higher score than connectedness to isolated nodes.
-* **Calculation**: Computed using PageRank as a mathematically sound proxy with a damping factor $d = 0.85$:
+* **Calculation**: Computed using PageRank with a damping factor $d = 0.85$:
   $$\text{eigenvector}(v) = \text{PageRank.rank}(v)$$
-* **Interpretation**: Reflects overall network power and prestige within the social structure.
+* **Interpretation**: Reflects overall network power and prestige within the social structure. Like eigenvector but prevents "sinks" or concentrated cliques from hogging centrality
 
+### `eigenvector`
+* **Definition**: Identifies nodes connected to highly connected hubs in undirected/dense networks
+* **Calculation**: Computed using Power Iteration across element collection
+* **Interpretation**: Eigenvector centrality identifies important nodes by measuring how well-connected they are to other highly influential nodes in the network.
 ---
 
 ## 3. Bottleneck & Seed Rankings
