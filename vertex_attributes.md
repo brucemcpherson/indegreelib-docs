@@ -6,7 +6,7 @@ This document explains the network attributes added to each vertex (participant)
 
 ## Overview of Vertex Network Attributes
 
-When processing survey responses, `Network.js` constructs an undirected graph representation of the network using Cytoscape.js. Each vertex in the graph receives a suite of enriched properties categorized into four main domains:
+When processing survey responses, `Network.js` constructs an directed graph representation of the network using Cytoscape.js. Each vertex in the graph receives a suite of enriched properties categorized into four main domains:
 
 1. **Treatment Classification**
 2. **Centrality Metrics**
@@ -52,7 +52,7 @@ Centrality metrics quantify the structural importance, reachability, and influen
 * **Interpretation**: Reflects overall network power and prestige within the social structure. Like eigenvector but prevents "sinks" or concentrated cliques from hogging centrality
 
 ### `eigenvector`
-* **Definition**: Identifies nodes connected to highly connected hubs in undirected/dense networks
+* **Definition**: Identifies nodes connected to highly connected hubs in dense networks
 * **Calculation**: Computed using Power Iteration across element collection
 * **Interpretation**: Eigenvector centrality identifies important nodes by measuring how well-connected they are to other highly influential nodes in the network.
 ---
