@@ -177,7 +177,8 @@ Note: `treatmentAnalysis` is a project runtime configuration property (set via t
 *   `treatment_group`, `treatment_selected`, `treatment_completed`: Decoded treatment classification fields based on `treatment_status` numeric codes.
 *   `betweenness`: Normalized betweenness centrality score `[0, 1]`.
 *   `closeness`: Normalized closeness centrality score `[0, 1]`.
-*   `eigenvector`: Eigenvector centrality score (computed via PageRank algorithm with 0.85 damping factor).
+*   `eigenvector`: Eigenvector centrality score.
+*   `pagerank`: Like eigenvector but avoids cliques (damping factor 0.85)
 *   `bottleneck_rank`: Integer rank (`1` = highest) based on betweenness centrality score.
 *   `base_seed_score`: Composite seed score combining 34% Closeness, 33% Betweenness, and 33% Normalized Eigenvector centrality.
 *   `seed_rank`: Diversified seed rank integer (`1` = top seed) computed using a greedy selection algorithm with distance-based redundancy penalties.
