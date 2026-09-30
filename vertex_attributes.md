@@ -106,6 +106,7 @@ These attributes measure how close each non-treated participant is to the neares
 | `betweenness` | Centrality | Identifying structural bridges |
 | `closeness` | Centrality | Measuring dissemination speed |
 | `eigenvector` | Centrality | Identifying prestigious core nodes |
+| `pagerank` | Centrality | like eigenvector but avoids cliques |
 | `bottleneck_rank` | Ranking | Ranking chokepoints for targeted moderation |
 | `base_seed_score` | Ranking | Raw composite quality metric for seeds |
 | `seed_rank` | Ranking | Optimally picking non-overlapping seed nodes for interventions |
